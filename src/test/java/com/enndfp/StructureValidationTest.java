@@ -1,15 +1,15 @@
 package com.enndfp;
 
-import com.enndfp.vertex.Vertex;
+import com.enndfp.adapters.AdapterCircle;
 import com.enndfp.shapes.Circle;
 import com.enndfp.shapes.Polygon;
 import com.enndfp.shapes.Rectangle;
 import com.enndfp.shapes.Triangle;
-import com.enndfp.adapters.AdapterCircle;
-import lombok.var;
+import com.enndfp.vertex.Vertex;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
@@ -58,7 +58,7 @@ public class StructureValidationTest {
     public void testInheritanceAndComposition() {
         // AdapterCircle 应该包含 Circle 类型的成员变量
         boolean hasCircleField = false;
-        for (var field : AdapterCircle.class.getDeclaredFields()) {
+        for (Field field : AdapterCircle.class.getDeclaredFields()) {
             if (field.getType() == Circle.class) {
                 hasCircleField = true;
                 break;

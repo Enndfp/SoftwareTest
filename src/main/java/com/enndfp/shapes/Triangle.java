@@ -1,7 +1,6 @@
 package com.enndfp.shapes;
 
 import com.enndfp.vertex.Vertex;
-import lombok.AllArgsConstructor;
 
 /**
  * Triangle类表示一个三角形，实现了Polygon接口。
@@ -10,12 +9,24 @@ import lombok.AllArgsConstructor;
  * @author 冯鹏
  * @version 1.0
  */
-@AllArgsConstructor
 public class Triangle implements Polygon {
     /**
      * 三角形的三个顶点
      */
     private Vertex v1, v2, v3;
+
+    /**
+     * 构造一个三角形。
+     *
+     * @param v1 三角形的第一个顶点
+     * @param v2 三角形的第二个顶点
+     * @param v3 三角形的第三个顶点
+     */
+    public Triangle(Vertex v1, Vertex v2, Vertex v3) {
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+    }
 
     /**
      * 绘制三角形，打印三角形的顶点信息。

@@ -1,9 +1,9 @@
 package com.enndfp;
 
-import com.enndfp.vertex.Vertex;
 import com.enndfp.shapes.Circle;
 import com.enndfp.shapes.Rectangle;
 import com.enndfp.shapes.Triangle;
+import com.enndfp.vertex.Vertex;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

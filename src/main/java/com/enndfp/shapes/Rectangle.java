@@ -1,7 +1,6 @@
 package com.enndfp.shapes;
 
 import com.enndfp.vertex.Vertex;
-import lombok.AllArgsConstructor;
 
 /**
  * Rectangle类表示一个矩形，实现了Polygon接口。
@@ -10,12 +9,26 @@ import lombok.AllArgsConstructor;
  * @author 冯鹏
  * @version 1.0
  */
-@AllArgsConstructor
 public class Rectangle implements Polygon {
     /**
      * 矩形的四个顶点
      */
     private Vertex v1, v2, v3, v4;
+
+    /**
+     * 构造一个矩形。
+     *
+     * @param v1 矩形的第一个顶点
+     * @param v2 矩形的第二个顶点
+     * @param v3 矩形的第三个顶点
+     * @param v4 矩形的第四个顶点
+     */
+    public Rectangle(Vertex v1, Vertex v2, Vertex v3, Vertex v4) {
+        this.v1 = v1;
+        this.v2 = v2;
+        this.v3 = v3;
+        this.v4 = v4;
+    }
 
     /**
      * 绘制矩形，打印矩形的顶点信息。

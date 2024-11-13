@@ -1,7 +1,5 @@
 package com.enndfp.vertex;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 /**
  * Vertex类用于表示一个二维平面上的顶点，包含x和y坐标。
@@ -10,8 +8,6 @@ import lombok.Data;
  * @author 冯鹏
  * @version 1.0
  */
-@Data
-@AllArgsConstructor
 public class Vertex {
     /**
      * x坐标
@@ -22,6 +18,35 @@ public class Vertex {
      * y坐标
      */
     private float y;
+
+    /**
+     * 获取x坐标。
+     *
+     * @return 返回x坐标，类型为float
+     */
+    public float getX() {
+        return x;
+    }
+
+    /**
+     * 获取y坐标。
+     *
+     * @return 返回y坐标，类型为float
+     */
+    public float getY() {
+        return y;
+    }
+
+    /**
+     * 构造一个顶点。
+     *
+     * @param x x坐标
+     * @param y y坐标
+     */
+    public Vertex(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
 
     /**
      * 计算当前顶点与另一个顶点之间的距离。

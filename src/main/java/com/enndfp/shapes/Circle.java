@@ -1,8 +1,6 @@
 package com.enndfp.shapes;
 
 import com.enndfp.vertex.Vertex;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 /**
  * Circle类表示一个圆形，包含圆心顶点和半径。
@@ -11,8 +9,6 @@ import lombok.Data;
  * @author 冯鹏
  * @version 1.0
  */
-@Data
-@AllArgsConstructor
 public class Circle {
     /**
      * 圆的中心点
@@ -23,6 +19,17 @@ public class Circle {
      * 圆的半径
      */
     private float radius;
+
+    /**
+     * 构造一个圆形。
+     *
+     * @param center 圆心顶点
+     * @param radius 圆的半径
+     */
+    public Circle(Vertex center, float radius) {
+        this.center = center;
+        this.radius = radius;
+    }
 
     /**
      * 绘制圆形的方法，打印圆的中心和半径信息。
