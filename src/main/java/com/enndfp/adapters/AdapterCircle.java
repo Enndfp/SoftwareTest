@@ -19,6 +19,15 @@ public class AdapterCircle implements Polygon {
     private Circle circle;
 
     /**
+     * 获取Circle对象
+     *
+     * @return 返回Circle对象
+     */
+    public Circle getCircle() {
+        return circle;
+    }
+
+    /**
      * 构造一个适配器圆形
      *
      * @param center 圆形的中心
